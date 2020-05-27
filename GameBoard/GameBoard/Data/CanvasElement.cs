@@ -1,5 +1,3 @@
-using System;
-
 namespace GameBoard.Data
 {
     public class CanvasElement
