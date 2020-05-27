@@ -13,6 +13,7 @@
           <e p="CanvasElement.cs" t="Include" />
           <e p="CanvasPosition.cs" t="Include" />
           <e p="CounterService.cs" t="Include" />
+          <e p="DeckOfCards.cs" t="Include" />
           <e p="GameService.cs" t="Include" />
           <e p="JsBridge.cs" t="Include" />
           <e p="Player.cs" t="Include" />

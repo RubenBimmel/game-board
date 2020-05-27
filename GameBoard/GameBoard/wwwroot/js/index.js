@@ -3,7 +3,7 @@ let dotnet = null;
 let canvas = null;
 let canvasWrapper = null;
 let selection = [];
-
+let images = {};
 
 /*
  *   Initialize
@@ -22,6 +22,7 @@ function initialize(reference) {
     canvas.on('mouse:up', onMouseUp);
     canvas.on('object:moving', onObjectMove);
     canvas.on('object:rotating', onObjectMove);
+    canvas.on('selection:created', onSelect);
 
     /*window.canvas.on('mouse:over', onMouseOver);
       window.canvas.on('mouse:out', onMouseOut);
@@ -53,6 +54,21 @@ function onMouseUp() {
     updateSelection()
 }
 
+function onSelect(options) {
+    // always disable scaling
+    options.target.setControlsVisibility({
+        mt: false,
+        mb: false,
+        ml: false,
+        mr: false,
+        bl: false,
+        br: false,
+        tl: false,
+        tr: false,
+        mtr: true
+    });
+}
+
 function onObjectMove(options) {
     if (!isNaN(options.target.id)) {
         dotnet.invokeMethodAsync("OnMove",{
@@ -65,8 +81,8 @@ function onObjectMove(options) {
         });
     }
     else {
-        const c = new fabric.Point(0, 0);
         options.target.forEachObject(target => {
+            let c = new fabric.Point(-target.width / 2, -target.height / 2);
             let mGroup = options.target.calcTransformMatrix(true);
             let mObject = target.calcTransformMatrix(true);
             let mTotal = fabric.util.multiplyTransformMatrices(mGroup, mObject);
@@ -93,29 +109,18 @@ function dispose() {
 }
 
 function addObject(element) {
-    var rect = new fabric.Rect({
-        id: element.id,
-        left: element.position.left,
-        top: element.position.top,
-        fill: 'grey',
-        width: 20,
-        height: 20
-    });
+    fabric.Image.fromURL(element.image, object => {
+        object.set({
+            id: element.id,
+            left: element.position.left,
+            top: element.position.top,
+            angle: element.angle
+        });
 
-    rect.setControlsVisibility({
-        mt: false,
-        mb: false,
-        ml: false,
-        mr: false,
-        bl: false,
-        br: false,
-        tl: false,
-        tr: false,
-        mtr: true
+        networkElements[element.id] = object;
+        canvas.add(object);
+        console.log(object)
     });
-
-    networkElements[element.id] = rect;
-    canvas.add(rect);
 }
 
 function selectObject(element, owner) {

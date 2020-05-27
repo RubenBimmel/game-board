@@ -34,6 +34,7 @@ namespace GameBoard.Data
             var element = new CanvasElement
             {
                 Id = _currentId++,
+                Image = DeckOfCards.GetRandomUrl(),
                 Position = position
             };
             Elements.Add(element);
