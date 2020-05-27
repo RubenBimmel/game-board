@@ -31,12 +31,7 @@ namespace GameBoard.Data
 
         public void AddObject(Player player, CanvasPosition position)
         {
-            var element = new CanvasElement
-            {
-                Id = _currentId++,
-                Image = DeckOfCards.GetRandomUrl(),
-                Position = position
-            };
+            var element = new Card(_currentId++, position);
             Elements.Add(element);
             OnObjectAdded?.Invoke(player, element);
         }

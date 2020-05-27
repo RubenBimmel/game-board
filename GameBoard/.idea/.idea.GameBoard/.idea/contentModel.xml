@@ -12,6 +12,7 @@
           <e p="Canvas.cs" t="Include" />
           <e p="CanvasElement.cs" t="Include" />
           <e p="CanvasPosition.cs" t="Include" />
+          <e p="Card.cs" t="Include" />
           <e p="CounterService.cs" t="Include" />
           <e p="DeckOfCards.cs" t="Include" />
           <e p="GameService.cs" t="Include" />

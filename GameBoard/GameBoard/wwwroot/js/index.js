@@ -3,7 +3,6 @@ let dotnet = null;
 let canvas = null;
 let canvasWrapper = null;
 let selection = [];
-let images = {};
 
 /*
  *   Initialize
@@ -120,12 +119,12 @@ function addObject(element) {
             id: element.id,
             left: element.position.left,
             top: element.position.top,
-            angle: element.angle
+            angle: element.angle,
+            cacheKey: element.image
         });
 
         networkElements[element.id] = object;
         canvas.add(object);
-        console.log(object)
     });
 }
 

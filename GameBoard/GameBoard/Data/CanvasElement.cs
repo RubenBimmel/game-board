@@ -1,6 +1,6 @@
 namespace GameBoard.Data
 {
-    public class CanvasElement
+    public abstract class CanvasElement
     {
         public int Id { get; set; }
         public string Image { get; set; }

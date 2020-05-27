@@ -14,7 +14,8 @@ namespace GameBoard.Data
         public static string GetRandomUrl()
         {
             var rnd = new Random();
-            return GetUrl(GetDeck(true)[rnd.Next(0, 53)]);
+            var deck = GetDeck(true);
+            return GetUrl(GetDeck(true)[rnd.Next(0, deck.Length - 1)]);
         }
         
         public static string GetUrl(string name)
