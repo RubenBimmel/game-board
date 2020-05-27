@@ -35,7 +35,9 @@ function initialize(reference) {
  */
 
 function onMouseDown(options) {
-    updateSelection();
+    if (updateSelection()) {
+        return;
+    }
     
     if (options.target) {
         return;
@@ -147,12 +149,13 @@ function updateSelection() {
     let newSelection = canvas.getActiveObjects().map(o => o.id);
     
     if (selection.length === newSelection.length && selection[0] === newSelection[0]) {
-        return;
+        return false;
     }
 
     dotnet.invokeMethodAsync("OnSelect", newSelection.filter(o => !selection.includes(o)));
     dotnet.invokeMethodAsync("OnDeselect", selection.filter(o => !newSelection.includes(o)));
     selection = newSelection;
+    return true;
 }
 
 /*function onMouseOver(options) {
