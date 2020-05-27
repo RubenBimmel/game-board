@@ -1,0 +1,38 @@
+﻿@page "/counter"
+@using GameBoard.Data
+@inject CounterService Service
+
+<div class="px-4">
+    <h1>Counter</h1>
+    
+    <p>Current count: @currentCount</p>
+    
+    <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+</div>
+
+@code {
+    private int currentCount = 0;
+
+    protected override void OnInitialized()
+    {
+        currentCount = Service.GetCounter();
+        Service.OnCounterChanged += UpdateCounter;
+    }
+
+    public void Dispose()
+    {
+        Service.OnCounterChanged -= UpdateCounter;
+    }
+
+    private async void UpdateCounter(object sender, int value) {
+        currentCount = value;
+        await InvokeAsync(() => StateHasChanged());
+    }
+
+    private void IncrementCount()
+    {
+        Service.IncrementCounter();
+    }
+
+    
+}

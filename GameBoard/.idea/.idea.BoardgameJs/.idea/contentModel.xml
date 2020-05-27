@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Q42\Passietijd\game-board\GameBoard" t="IncludeFlat">
+      <e p="BoardgameJs.sln" t="IncludeFlat" />
+    </e>
+    <e p="C:\Users\Ruben\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Ruben\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_BoardgameJs.1892624496.00" t="ExcludeRecursive" />
+  </component>
+</project>
