@@ -8,7 +8,8 @@ namespace GameBoard.Data
     {
         private readonly IJSRuntime _jsRuntime;
         private readonly GameService _gameService;
-        private readonly Player _player;
+        
+        private Player _player;
         private DotNetObjectReference<PlayerEventHandler> _objRef;
         
         
@@ -16,15 +17,30 @@ namespace GameBoard.Data
         {
             _jsRuntime = runtime;
             _gameService = service;
-            _player = service.AddPlayer(this);
         }
 
         public async Task Initialize() {
+            var id = await _jsRuntime.InvokeAsync<string>(
+                "getPlayerId");
+
+            if (!string.IsNullOrEmpty(id))
+            {
+                _player = _gameService.ConnectPlayer(this, id);
+            }
+
+            if (_player == null)
+            {
+                _player = _gameService.AddPlayer(this);
+                await _jsRuntime.InvokeVoidAsync(
+                    "setPlayerId",
+                    _player.Id.ToString());
+            }
+
             _objRef = DotNetObjectReference.Create(this);
-            await _jsRuntime.InvokeAsync<PlayerEventHandler>(
+            await _jsRuntime.InvokeVoidAsync(
                 "initialize",
                 _objRef);
-
+            
             _gameService.Canvas.OnObjectMoved += MoveObject;
             _gameService.Canvas.OnObjectAdded += AddObject;
             _gameService.Canvas.OnObjectSelected += SelectObject;

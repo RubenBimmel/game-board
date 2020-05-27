@@ -9,7 +9,7 @@ let images = {};
  *   Initialize
  */
 
-function initialize(reference) {
+function initialize(reference, id) {
     dotnet = reference;
     canvasWrapper = document.getElementById('canvas-wrapper');
     canvas = new fabric.Canvas('canvas', {
@@ -26,10 +26,16 @@ function initialize(reference) {
 
     /*window.canvas.on('mouse:over', onMouseOver);
       window.canvas.on('mouse:out', onMouseOut);
-      window.canvas.on('object:moving', onObjectMove);
-    
-      loadImages();*/
-};
+      window.canvas.on('object:moving', onObjectMove);*/
+}
+
+function getPlayerId(id) {
+    return window.sessionStorage.getItem("playerId");
+}
+
+function setPlayerId(id) {
+    window.sessionStorage.setItem("playerId", id);
+}
 
 /*
  *   Fabric events
@@ -253,8 +259,4 @@ function addCard(card, x, y) {
   }
   
   this.canvas.add(imgInstance);
-}
-
-async function loadImages() {
-  this.images.deckOfCards = await DeckOfCards();
 }*/

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -18,6 +19,18 @@ namespace GameBoard.Data
                 Color = GetUnusedColor()
             };
             Players.Add(player);
+            return player;
+        }
+
+        public Player ConnectPlayer(PlayerEventHandler eventHandler, string id)
+        {
+            var player = Players.Find(p => p.Id.ToString() == id);
+            
+            if (player != null)
+            {
+                player.EventHandler = eventHandler;
+            }
+
             return player;
         }
 
