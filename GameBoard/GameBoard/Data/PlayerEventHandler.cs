@@ -85,6 +85,12 @@ namespace GameBoard.Data
             if (ids.Length == 0) return;
             _gameService.Canvas.SelectObjects(null, ids);
         }
+        
+        [JSInvokable]
+        public void OnDoubleClick(int id)
+        {
+            Console.WriteLine(id);
+        }
 
         private void MoveObject(Player player, CanvasElement element)
         {

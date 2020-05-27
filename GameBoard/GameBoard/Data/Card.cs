@@ -1,12 +1,15 @@
 namespace GameBoard.Data
 {
-    public class Card : CanvasElement
+    public static class Card
     {
-        public Card(int id, CanvasPosition position)
+        public static CanvasElement GetCard(int id, CanvasPosition position)
         {
-            Id = id;
-            Image = DeckOfCards.GetRandomUrl();
-            Position = position;
+            return new CanvasElement
+            {
+                Id = id,
+                Image = DeckOfCards.GetRandomUrl(),
+                Position = position
+            };
         }
     }
 }

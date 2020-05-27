@@ -1,8 +1,11 @@
+const DoubleClickDelay = 400;
+
 let networkElements = [];
 let dotnet = null;
 let canvas = null;
 let canvasWrapper = null;
 let selection = [];
+let lastMouseDown = 0;
 
 /*
  *   Initialize
@@ -41,11 +44,17 @@ function setPlayerId(id) {
  */
 
 function onMouseDown(options) {
+    let doubleClick = Date.now() - lastMouseDown < DoubleClickDelay;
+    lastMouseDown = Date.now();
+    
     if (updateSelection()) {
         return;
     }
     
     if (options.target) {
+        if (doubleClick && !isNaN(options.target.id)) {
+            dotnet.invokeMethodAsync("OnDoubleClick", options.target.id);
+        }
         return;
     }
 

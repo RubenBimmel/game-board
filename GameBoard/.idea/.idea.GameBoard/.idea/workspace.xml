@@ -4,7 +4,8 @@
     <list default="true" id="e57f34e9-7658-426c-97da-8432a30475f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/GameBoard/Data/Canvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/Canvas.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Data/DeckOfCards.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/DeckOfCards.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Data/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/Card.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameBoard/wwwroot/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+            <state relative-caret-position="195">
+              <caret line="55" column="51" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -30,8 +31,8 @@
             <state relative-caret-position="150">
               <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding>
-                <marker date="1590593501908" expanded="true" signature="24:294" ph="{...}" />
-                <marker date="1590593501908" expanded="true" signature="66:292" ph="{...}" />
+                <marker date="1590594419894" expanded="true" signature="24:285" ph="{...}" />
+                <marker date="1590594419894" expanded="true" signature="57:283" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -40,39 +41,41 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameBoard/Data/Card.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="210">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
               <folding>
-                <marker date="1590593551984" expanded="true" signature="24:253" ph="{...}" />
-                <marker date="1590593551984" expanded="true" signature="64:251" ph="{...}" />
-                <marker date="1590593551984" expanded="true" signature="123:245" ph="{...}" />
+                <marker date="1590594406398" expanded="true" signature="24:345" ph="{...}" />
+                <marker date="1590594406398" expanded="true" signature="55:343" ph="{...}" />
+                <marker date="1590594406398" expanded="true" signature="138:337" ph="{...}" />
+                <marker date="1590594406398" expanded="true" signature="198:326" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="446">
+              <caret line="91" column="34" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
               <folding>
-                <marker date="1590590436243" expanded="false" signature="6:70" ph="..." />
-                <marker date="1590590436243" expanded="true" signature="96:3144" ph="{...}" />
-                <marker date="1590590436243" expanded="true" signature="148:3142" ph="{...}" />
-                <marker date="1590590436243" expanded="true" signature="455:545" ph="{...}" />
-                <marker date="1590590436243" expanded="true" signature="586:1569" ph="{...}" />
-                <marker date="1590590436243" expanded="true" signature="722:814" ph="{...}" />
-                <marker date="1590590436243" expanded="true" signature="848:1061" ph="{...}" />
-                <marker date="1590590436243" expanded="true" signature="1489:1559" ph="{...}" />
-                <marker date="1590590436243" expanded="true" signature="1608:1898" ph="{...}" />
-                <marker date="1590590436243" expanded="true" signature="1971:2053" ph="{...}" />
-                <marker date="1590590436243" expanded="true" signature="2135:2217" ph="{...}" />
-                <marker date="1590590436243" expanded="true" signature="2288:2410" ph="{...}" />
-                <marker date="1590590436243" expanded="true" signature="2483:2602" ph="{...}" />
-                <marker date="1590590436243" expanded="true" signature="2673:2799" ph="{...}" />
-                <marker date="1590590436243" expanded="true" signature="2877:2959" ph="{...}" />
-                <marker date="1590590436243" expanded="true" signature="3032:3136" ph="{...}" />
+                <marker date="1590594690692" expanded="false" signature="6:70" ph="..." />
+                <marker date="1590594690692" expanded="true" signature="96:3272" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="148:3270" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="455:545" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="586:1569" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="722:814" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="848:1061" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="1489:1559" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="1608:1898" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="1971:2053" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="2135:2217" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="2288:2410" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="2483:2602" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="2675:2730" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="2801:2927" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="3005:3087" ph="{...}" />
+                <marker date="1590594690692" expanded="true" signature="3160:3264" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -82,7 +85,7 @@
         <entry file="file://$PROJECT_DIR$/GameBoard/Data/GameService.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="495">
-              <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
               <folding>
                 <marker date="1590590325891" expanded="true" signature="6:66" ph="..." />
                 <marker date="1590590325891" expanded="true" signature="92:1272" ph="{...}" />
@@ -125,19 +128,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameBoard/Data/Canvas.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            <state relative-caret-position="300">
+              <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding>
-                <marker date="1590593586576" expanded="true" signature="59:1519" ph="{...}" />
-                <marker date="1590593586576" expanded="true" signature="169:1517" ph="{...}" />
-                <marker date="1590593586576" expanded="true" signature="580:943" ph="{...}" />
-                <marker date="1590593586576" expanded="true" signature="705:757" ph="{...}" />
-                <marker date="1590593586576" expanded="true" signature="1014:1181" ph="{...}" />
-                <marker date="1590593586576" expanded="true" signature="1253:1511" ph="{...}" />
-                <marker date="1590593586576" expanded="true" signature="1299:1501" ph="{...}" />
+                <marker date="1590594485550" expanded="true" signature="59:1467" ph="{...}" />
+                <marker date="1590594485550" expanded="true" signature="169:1465" ph="{...}" />
+                <marker date="1590594485550" expanded="true" signature="524:887" ph="{...}" />
+                <marker date="1590594485550" expanded="true" signature="649:701" ph="{...}" />
+                <marker date="1590594485550" expanded="true" signature="958:1129" ph="{...}" />
+                <marker date="1590594485550" expanded="true" signature="1201:1459" ph="{...}" />
+                <marker date="1590594485550" expanded="true" signature="1247:1449" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -191,12 +194,12 @@
         <option value="$PROJECT_DIR$/GameBoard/_Imports.razor" />
         <option value="$PROJECT_DIR$/GameBoard/Data/Player.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/GameService.cs" />
-        <option value="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/DeckOfCards.cs" />
-        <option value="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" />
-        <option value="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/Card.cs" />
+        <option value="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/Canvas.cs" />
+        <option value="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" />
+        <option value="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" />
       </list>
     </option>
   </component>
@@ -328,12 +331,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590583017532</updated>
-      <workItem from="1590583018892" duration="10414000" />
+      <workItem from="1590583018892" duration="11525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10414000" />
+    <option name="totallyTimeSpent" value="11525000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -346,10 +349,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3832" y="444" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24990067" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24990067" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="NuGet" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -362,7 +364,7 @@
       <window_info anchor="bottom" id="Build" weight="0.3299923" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3299923" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3299923" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -428,7 +430,7 @@
     <entry file="file://$PROJECT_DIR$/GameBoard/Data/GameService.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
-          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
           <folding>
             <marker date="1590590325891" expanded="true" signature="6:66" ph="..." />
             <marker date="1590590325891" expanded="true" signature="92:1272" ph="{...}" />
@@ -440,31 +442,6 @@
             <marker date="1590590325891" expanded="true" signature="1018:1264" ph="{...}" />
             <marker date="1590590325891" expanded="true" signature="1071:1225" ph="{...}" />
             <marker date="1590590325891" expanded="true" signature="1141:1211" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
-          <folding>
-            <marker date="1590590436243" expanded="false" signature="6:70" ph="..." />
-            <marker date="1590590436243" expanded="true" signature="96:3144" ph="{...}" />
-            <marker date="1590590436243" expanded="true" signature="148:3142" ph="{...}" />
-            <marker date="1590590436243" expanded="true" signature="455:545" ph="{...}" />
-            <marker date="1590590436243" expanded="true" signature="586:1569" ph="{...}" />
-            <marker date="1590590436243" expanded="true" signature="722:814" ph="{...}" />
-            <marker date="1590590436243" expanded="true" signature="848:1061" ph="{...}" />
-            <marker date="1590590436243" expanded="true" signature="1489:1559" ph="{...}" />
-            <marker date="1590590436243" expanded="true" signature="1608:1898" ph="{...}" />
-            <marker date="1590590436243" expanded="true" signature="1971:2053" ph="{...}" />
-            <marker date="1590590436243" expanded="true" signature="2135:2217" ph="{...}" />
-            <marker date="1590590436243" expanded="true" signature="2288:2410" ph="{...}" />
-            <marker date="1590590436243" expanded="true" signature="2483:2602" ph="{...}" />
-            <marker date="1590590436243" expanded="true" signature="2673:2799" ph="{...}" />
-            <marker date="1590590436243" expanded="true" signature="2877:2959" ph="{...}" />
-            <marker date="1590590436243" expanded="true" signature="3032:3136" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -484,10 +461,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameBoard/wwwroot/js/index.js">
+    <entry file="file://$PROJECT_DIR$/GameBoard/Data/Card.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        <state relative-caret-position="210">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <marker date="1590594406398" expanded="true" signature="24:345" ph="{...}" />
+            <marker date="1590594406398" expanded="true" signature="55:343" ph="{...}" />
+            <marker date="1590594406398" expanded="true" signature="138:337" ph="{...}" />
+            <marker date="1590594406398" expanded="true" signature="198:326" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -496,36 +479,57 @@
         <state relative-caret-position="150">
           <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding>
-            <marker date="1590593501908" expanded="true" signature="24:294" ph="{...}" />
-            <marker date="1590593501908" expanded="true" signature="66:292" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameBoard/Data/Card.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <marker date="1590593551984" expanded="true" signature="24:253" ph="{...}" />
-            <marker date="1590593551984" expanded="true" signature="64:251" ph="{...}" />
-            <marker date="1590593551984" expanded="true" signature="123:245" ph="{...}" />
+            <marker date="1590594419894" expanded="true" signature="24:285" ph="{...}" />
+            <marker date="1590594419894" expanded="true" signature="57:283" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GameBoard/Data/Canvas.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        <state relative-caret-position="300">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
-            <marker date="1590593586576" expanded="true" signature="59:1519" ph="{...}" />
-            <marker date="1590593586576" expanded="true" signature="169:1517" ph="{...}" />
-            <marker date="1590593586576" expanded="true" signature="580:943" ph="{...}" />
-            <marker date="1590593586576" expanded="true" signature="705:757" ph="{...}" />
-            <marker date="1590593586576" expanded="true" signature="1014:1181" ph="{...}" />
-            <marker date="1590593586576" expanded="true" signature="1253:1511" ph="{...}" />
-            <marker date="1590593586576" expanded="true" signature="1299:1501" ph="{...}" />
+            <marker date="1590594485550" expanded="true" signature="59:1467" ph="{...}" />
+            <marker date="1590594485550" expanded="true" signature="169:1465" ph="{...}" />
+            <marker date="1590594485550" expanded="true" signature="524:887" ph="{...}" />
+            <marker date="1590594485550" expanded="true" signature="649:701" ph="{...}" />
+            <marker date="1590594485550" expanded="true" signature="958:1129" ph="{...}" />
+            <marker date="1590594485550" expanded="true" signature="1201:1459" ph="{...}" />
+            <marker date="1590594485550" expanded="true" signature="1247:1449" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameBoard/wwwroot/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="55" column="51" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="91" column="34" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
+          <folding>
+            <marker date="1590594690692" expanded="false" signature="6:70" ph="..." />
+            <marker date="1590594690692" expanded="true" signature="96:3272" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="148:3270" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="455:545" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="586:1569" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="722:814" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="848:1061" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="1489:1559" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="1608:1898" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="1971:2053" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="2135:2217" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="2288:2410" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="2483:2602" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="2675:2730" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="2801:2927" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="3005:3087" ph="{...}" />
+            <marker date="1590594690692" expanded="true" signature="3160:3264" ph="{...}" />
           </folding>
         </state>
       </provider>
