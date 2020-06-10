@@ -19,7 +19,7 @@ namespace GameBoard.Data
             _gameService = service;
         }
 
-        public async Task Initialize() {
+        public async Task<Guid> Initialize() {
             var id = await _jsRuntime.InvokeAsync<string>(
                 "getPlayerId");
 
@@ -50,6 +50,8 @@ namespace GameBoard.Data
             {
                 AddObject(null, element);
             }
+
+            return _player.Id;
         }
         
         public void Dispose()

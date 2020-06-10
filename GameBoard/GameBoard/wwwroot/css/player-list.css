@@ -1,0 +1,20 @@
+.player-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+    .player-list .player {
+        font-size: 20px;
+        margin: 20px 20px 20px 0;
+    }
+
+        .player-list .player.self {
+            color: white;
+        }
+
+        .player-list .player svg{
+            margin-right: 20px;
+        }

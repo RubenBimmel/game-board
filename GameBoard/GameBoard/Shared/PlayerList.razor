@@ -1,0 +1,34 @@
+@using GameBoard.Data
+@inject GameService Service;
+@implements IDisposable
+
+<div class="player-list">
+    @for (var i = 0; i < Service.Players.Count; i++)
+    {
+        <div class="player @(PlayerID == Service.Players[i].Id ? "self" : "")">
+            <svg height="50" width="50">
+                <circle cx="25" cy="25" r="20" stroke="white" stroke-width="2" fill="@Service.Players[i].Color"/>
+            </svg>
+            Player @(i + 1)
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter] public Guid PlayerID { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        Service.OnPlayersChange += UpdatePlayers;
+    }
+
+    public void Dispose()
+    {
+        Service.OnPlayersChange -= UpdatePlayers;
+    }
+
+    private async void UpdatePlayers()
+    {
+        await InvokeAsync(StateHasChanged);
+    }
+}

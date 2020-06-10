@@ -31,9 +31,6 @@
         </e>
         <e p="Pages" t="Include">
           <e p="_Host.cshtml" t="Include" />
-          <e p="Canvas.razor" t="Include" />
-          <e p="Counter.razor" t="Include" />
-          <e p="Error.razor" t="Include" />
           <e p="Index.razor" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
@@ -41,9 +38,9 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Shared" t="Include">
+          <e p="GameCanvas.razor" t="Include" />
           <e p="MainLayout.razor" t="Include" />
-          <e p="NavMenu.razor" t="Include" />
-          <e p="SurveyPrompt.razor" t="Include" />
+          <e p="PlayerList.razor" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="wwwroot" t="Include">
@@ -70,6 +67,7 @@
               <e p="ICON-LICENSE" t="Include" />
               <e p="README.md" t="Include" />
             </e>
+            <e p="player-list.css" t="Include" />
             <e p="site.css" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />

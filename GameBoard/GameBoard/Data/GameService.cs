@@ -8,6 +8,7 @@ namespace GameBoard.Data
     {
         public Canvas Canvas { get; } = new Canvas();
         public List<Player> Players { get; } = new List<Player>();
+        public event Action OnPlayersChange;
 
         private readonly string[] _colors = {"red", "blue", "green", "yellow", "orange", "purple"};
         
@@ -19,6 +20,7 @@ namespace GameBoard.Data
                 Color = GetUnusedColor()
             };
             Players.Add(player);
+            OnPlayersChange?.Invoke();
             return player;
         }
 

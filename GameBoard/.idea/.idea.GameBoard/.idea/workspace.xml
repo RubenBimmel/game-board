@@ -20,49 +20,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57f34e9-7658-426c-97da-8432a30475f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.GameBoard/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameBoard/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameBoard/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameBoard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameBoard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Data/Canvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/Canvas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Data/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/Card.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Data/DeckOfCards.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/DeckOfCards.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Data/GameService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/GameService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameBoard/GameBoard.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/GameBoard.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Pages/Canvas.razor" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Shared/GameCanvas.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Pages/Counter.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Pages/Error.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Pages/Index.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Shared/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Shared/MainLayout.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Shared/NavMenu.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Shared/SurveyPrompt.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/GameBoard/Shared/MainLayout.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GameBoard/Shared/GameCanvas.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameBoard/_Imports.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GameBoard/Pages/Index.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GameBoard/Pages/_Host.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameBoard/Data/DeckOfCards.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameBoard/Data/Card.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GameBoard/App.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GameBoard/Data/JsBridge.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameBoard/Data/CanvasPosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameBoard/Data/Canvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameBoard/Data/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/FF79B842-EB03-425A-B99E-9D4470A9CE62/14/LayoutComponentBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameBoard/Data/GameService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/GameBoard/Shared/NavMenu.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GameBoard/Shared/PlayerList.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/GameBoard/_Imports.razor" />
         <option value="$PROJECT_DIR$/GameBoard/Data/Player.cs" />
-        <option value="$PROJECT_DIR$/GameBoard/Data/GameService.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/DeckOfCards.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/Canvas.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/Card.cs" />
-        <option value="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" />
         <option value="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" />
+        <option value="$PROJECT_DIR$/GameBoard/Shared/Canvas.razor" />
+        <option value="$PROJECT_DIR$/GameBoard/Shared/SurveyPrompt.razor" />
+        <option value="$PROJECT_DIR$/GameBoard/Pages/Index.razor" />
+        <option value="$PROJECT_DIR$/GameBoard/wwwroot/css/site.css" />
+        <option value="$PROJECT_DIR$/GameBoard/Data/GameService.cs" />
+        <option value="$PROJECT_DIR$/GameBoard/Shared/MainLayout.razor" />
+        <option value="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" />
+        <option value="$PROJECT_DIR$/GameBoard/wwwroot/css/player-list.css" />
+        <option value="$PROJECT_DIR$/GameBoard/Shared/PlayerList.razor" />
+        <option value="$PROJECT_DIR$/GameBoard/Shared/GameCanvas.razor" />
       </list>
     </option>
   </component>
@@ -84,6 +109,7 @@
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.CSharpInteractiveConfiguration" />
@@ -131,7 +157,7 @@
       <option name="presentableId" value="Default" />
       <updated>1590583017532</updated>
       <workItem from="1590583018892" duration="11682000" />
-      <workItem from="1591794480798" duration="2485000" />
+      <workItem from="1591794480798" duration="6497000" />
     </task>
     <servers />
   </component>
@@ -155,30 +181,30 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2518" height="399" key="GridCell.Tab.0.bottom" timestamp="1591796530580">
+    <state width="2518" height="399" key="GridCell.Tab.0.bottom" timestamp="1591800896601">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2518" height="399" key="GridCell.Tab.0.bottom/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591796530580" />
-    <state width="2518" height="399" key="GridCell.Tab.0.center" timestamp="1591796530580">
+    <state width="2518" height="399" key="GridCell.Tab.0.bottom/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591800896601" />
+    <state width="2518" height="399" key="GridCell.Tab.0.center" timestamp="1591800896601">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2518" height="399" key="GridCell.Tab.0.center/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591796530580" />
-    <state width="2518" height="399" key="GridCell.Tab.0.left" timestamp="1591796530579">
+    <state width="2518" height="399" key="GridCell.Tab.0.center/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591800896601" />
+    <state width="2518" height="399" key="GridCell.Tab.0.left" timestamp="1591800896601">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2518" height="399" key="GridCell.Tab.0.left/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591796530579" />
-    <state width="2518" height="399" key="GridCell.Tab.0.right" timestamp="1591796530580">
+    <state width="2518" height="399" key="GridCell.Tab.0.left/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591800896601" />
+    <state width="2518" height="399" key="GridCell.Tab.0.right" timestamp="1591800896601">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2518" height="399" key="GridCell.Tab.0.right/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591796530580" />
-    <state x="4798" y="885" width="644" height="534" key="find.popup" timestamp="1591795614289">
+    <state width="2518" height="399" key="GridCell.Tab.0.right/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591800896601" />
+    <state x="4798" y="885" width="780" height="534" key="find.popup" timestamp="1591799589282">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state x="4798" y="885" width="644" height="534" key="find.popup/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591795614289" />
-    <state width="300" height="36" key="javadoc.popup.new" timestamp="1591796439688">
+    <state x="4798" y="885" width="780" height="534" key="find.popup/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591799589282" />
+    <state width="300" height="36" key="javadoc.popup.new" timestamp="1591799182902">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="300" height="36" key="javadoc.popup.new/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591796439688" />
+    <state width="300" height="36" key="javadoc.popup.new/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591799182902" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,20 +1,22 @@
-@page "/canvas"
 @using GameBoard.Data
 @inject IJSRuntime JsRuntime;
 @inject GameService Service;
 
 <div id="canvas-wrapper">
     <canvas id="canvas"></canvas>
+    <PlayerList PlayerId="@playerId"/>
 </div>
 
 @code {
     private PlayerEventHandler playerEventHandler { get; set; }
-    
+    private Guid playerId { get; set; }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender) {
             playerEventHandler = new PlayerEventHandler(JsRuntime, Service);
-            await playerEventHandler.Initialize();
+            playerId = await playerEventHandler.Initialize();
+            StateHasChanged();
         }
     }
 }
