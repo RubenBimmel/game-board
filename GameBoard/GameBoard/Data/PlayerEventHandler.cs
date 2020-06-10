@@ -44,6 +44,7 @@ namespace GameBoard.Data
             _gameService.Canvas.OnObjectMoved += MoveObject;
             _gameService.Canvas.OnObjectAdded += AddObject;
             _gameService.Canvas.OnObjectSelected += SelectObject;
+            _gameService.Canvas.OnObjectChanged += UpdateObject;
 
             foreach (var element in _gameService.Canvas.Elements)
             {
@@ -58,6 +59,7 @@ namespace GameBoard.Data
             _gameService.Canvas.OnObjectMoved -= MoveObject;
             _gameService.Canvas.OnObjectAdded -= AddObject;
             _gameService.Canvas.OnObjectSelected -= SelectObject;
+            _gameService.Canvas.OnObjectChanged -= UpdateObject;
         }
 
         [JSInvokable]
@@ -89,7 +91,7 @@ namespace GameBoard.Data
         [JSInvokable]
         public void OnDoubleClick(int id)
         {
-            Console.WriteLine(id);
+            _gameService.Canvas.DoubleClick(_player, id);
         }
 
         private void MoveObject(Player player, CanvasElement element)
@@ -106,6 +108,11 @@ namespace GameBoard.Data
         private void SelectObject(Player player, CanvasElement element)
         {
             _jsRuntime.InvokeVoidAsync("selectObject", element, _player == player);
+        }
+
+        private void UpdateObject(Player player, CanvasElement element)
+        {
+            _jsRuntime.InvokeVoidAsync("updateObject", element);
         }
     }
 }

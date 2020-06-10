@@ -7,5 +7,7 @@ namespace GameBoard.Data
         public CanvasPosition Position { get; set; }
         public float Angle { get; set; }
         public Player Owner { get; set; }
+
+        public virtual void OnDoubleClick(Canvas canvas) { }
     }
 }

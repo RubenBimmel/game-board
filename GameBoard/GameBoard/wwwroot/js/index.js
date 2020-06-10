@@ -44,17 +44,11 @@ function setPlayerId(id) {
  */
 
 function onMouseDown(options) {
-    let doubleClick = Date.now() - lastMouseDown < DoubleClickDelay;
-    lastMouseDown = Date.now();
-    
     if (updateSelection()) {
         return;
     }
     
     if (options.target) {
-        if (doubleClick && !isNaN(options.target.id)) {
-            dotnet.invokeMethodAsync("OnDoubleClick", options.target.id);
-        }
         return;
     }
 
@@ -64,8 +58,21 @@ function onMouseDown(options) {
     });
 }
 
-function onMouseUp() {
-    updateSelection()
+function onMouseUp(options) {
+    if (updateSelection()) {
+        return;
+    }
+
+    if (!options.target) {
+        return;
+    }
+    
+    if (Date.now() - lastMouseDown < DoubleClickDelay && !isNaN(options.target.id)) {
+        dotnet.invokeMethodAsync("OnDoubleClick", options.target.id);
+        return;
+    }
+
+    lastMouseDown = Date.now();
 }
 
 function onSelect(options) {
@@ -154,6 +161,13 @@ function moveObject(element) {
     canvas.renderAll();
 }
 
+function updateObject(element) {
+    fabric.util.loadImage(element.image, function(img) {
+        networkElements[element.id].setElement(img)
+        canvas.renderAll();
+    });
+}
+
 /*
  *   Helper functions
  */
@@ -237,34 +251,4 @@ function highlight(target, width, render) {
   target.set('stroke', 'red');
   target.set('strokeWidth', width);
   if (render) this.canvas.renderAll();
-}
-
-function addCard(card, x, y) {
-  var imgInstance = new fabric.Image(this.images.deckOfCards['deck'], {
-    left: x,
-    top: y
-  });
-
-  imgInstance.setControlsVisibility({
-     mt: false, 
-     mb: false, 
-     ml: false, 
-     mr: false, 
-     bl: false,
-     br: false, 
-     tl: false, 
-     tr: false,
-     mtr: true, 
-  });
-
-  imgInstance.data = {
-    card: card,
-    faceUp: false,
-    onDoubleClick: () => {
-      imgInstance.data.faceUp = !imgInstance.data.faceUp;
-      imgInstance.setElement(imgInstance.data.faceUp ? this.images.deckOfCards[imgInstance.data.card] : this.images.deckOfCards['deck']);
-    }
-  }
-  
-  this.canvas.add(imgInstance);
 }*/

@@ -9,6 +9,7 @@ namespace GameBoard.Data
         public event ObjectDelegate OnObjectMoved;
         public event ObjectDelegate OnObjectAdded;
         public event ObjectDelegate OnObjectSelected;
+        public event ObjectDelegate OnObjectChanged;
         public readonly List<CanvasElement> Elements = new List<CanvasElement>();
         
         private int _currentId;
@@ -30,7 +31,7 @@ namespace GameBoard.Data
 
         public void AddObject(Player player, CanvasPosition position)
         {
-            var element = Card.GetCard(_currentId++, position);
+            var element = new Card(_currentId++, position);
             Elements.Add(element);
             OnObjectAdded?.Invoke(player, element);
         }
@@ -43,6 +44,17 @@ namespace GameBoard.Data
                 Elements[idx].Owner = player;
                 OnObjectSelected?.Invoke(player, Elements[idx]);
             }
+        }
+
+        public void UpdateObject(CanvasElement element)
+        {
+            OnObjectChanged?.Invoke(null, element);
+        }
+
+        public void DoubleClick(Player player, int id)
+        {
+            var element = Elements.Find(e => e.Id == id);
+            element?.OnDoubleClick(this);
         }
     }
 }
