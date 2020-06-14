@@ -1,4 +1,5 @@
 const DoubleClickDelay = 400;
+const RightMouseButton = 3;
 
 let networkElements = [];
 let dotnet = null;
@@ -6,6 +7,7 @@ let canvas = null;
 let canvasWrapper = null;
 let selection = [];
 let lastMouseDown = 0;
+let contextMenuOpen = false;
 
 /*
  *   Initialize
@@ -15,7 +17,9 @@ function initialize(reference, id) {
     dotnet = reference;
     canvasWrapper = document.getElementById('canvas-wrapper');
     canvas = new fabric.Canvas('canvas', {
-        backgroundColor: 'rgb(245,245,245)'
+        backgroundColor: 'rgb(245,245,245)',
+        fireRightClick: true,
+        stopContextMenu: true
     });
 
     resize();
@@ -44,6 +48,14 @@ function setPlayerId(id) {
  */
 
 function onMouseDown(options) {
+    if (contextMenuOpen) {
+        return;
+    }
+    
+    if (options.button === RightMouseButton) {
+        return;
+    }
+    
     if (updateSelection()) {
         return;
     }
@@ -59,6 +71,35 @@ function onMouseDown(options) {
 }
 
 function onMouseUp(options) {
+    if (options.button === RightMouseButton) {
+        contextMenuOpen = true;
+        if (!options.target) {
+            dotnet.invokeMethodAsync("OnRightClick", {
+                Top: options.pointer.y,
+                Left: options.pointer.x
+            });
+        }
+        else if (!isNaN(options.target.id))
+        {
+            dotnet.invokeMethodAsync("OnRightClickElement", options.target.id, {
+                Top: options.pointer.y,
+                Left: options.pointer.x
+            });
+        } else {
+            dotnet.invokeMethodAsync("OnRightClickMultiple", options.target.getObjects().map(object => object.id), {
+                Top: options.pointer.y,
+                Left: options.pointer.x
+            });
+        }
+        return;
+    }
+    
+    if (contextMenuOpen) {
+        contextMenuOpen = false;
+        dotnet.invokeMethodAsync("CloseContextMenu");
+        return;
+    }
+    
     if (updateSelection()) {
         return;
     }

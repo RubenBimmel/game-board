@@ -1,0 +1,37 @@
+@using GameBoard.Data
+@implements IDisposable
+
+<div id="context-menu">
+    @if (show)
+    {
+        <ul>
+            @foreach (var option in PlayerEventHandler.ContextMenuOptions.Keys)
+            {
+                <li>
+                    <button @onclick="PlayerEventHandler.ContextMenuOptions[option]">@option</button>
+                </li>
+            }
+        </ul>
+    }
+</div>
+
+@code {
+    [Parameter] public PlayerEventHandler PlayerEventHandler { get; set; }
+
+    private bool show => PlayerEventHandler.ContextMenuOptions != null && PlayerEventHandler.ContextMenuOptions.Count > 0;
+    
+    protected override void OnInitialized()
+    {
+        PlayerEventHandler.OnContextMenuChange += UpdateContextMenu;
+    }
+
+    public void Dispose()
+    {
+        PlayerEventHandler.OnContextMenuChange -= UpdateContextMenu;
+    }
+
+    private async void UpdateContextMenu()
+    {
+        await InvokeAsync(StateHasChanged);
+    }
+}

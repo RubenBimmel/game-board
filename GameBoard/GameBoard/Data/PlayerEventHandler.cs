@@ -1,11 +1,17 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
 
 namespace GameBoard.Data
 {
     public class PlayerEventHandler : IDisposable
     {
+        public Dictionary<string, EventCallback<MouseEventArgs>> ContextMenuOptions { get; set; }
+        public event Action OnContextMenuChange;
+        
         private readonly IJSRuntime _jsRuntime;
         private readonly GameService _gameService;
         
@@ -94,6 +100,43 @@ namespace GameBoard.Data
         public void OnDoubleClick(int id)
         {
             _gameService.Canvas.DoubleClick(_player, id);
+        }
+        
+        [JSInvokable]
+        public void OnRightClick(CanvasPosition position)
+        {
+            ContextMenuOptions = new Dictionary<string, EventCallback<MouseEventArgs>>
+            {
+                { "log", EventCallback.Factory.Create<MouseEventArgs>(this, () =>  Console.WriteLine("log canvas"))}
+            };
+            OnContextMenuChange?.Invoke();
+        }
+        
+        [JSInvokable]
+        public void OnRightClickElement(int id, CanvasPosition position)
+        {
+            ContextMenuOptions = new Dictionary<string, EventCallback<MouseEventArgs>>
+            {
+                { "log", EventCallback.Factory.Create<MouseEventArgs>(this, () =>  Console.WriteLine("log element " + id))}
+            };
+            OnContextMenuChange?.Invoke();
+        }
+        
+        [JSInvokable]
+        public void OnRightClickMultiple(int[] ids, CanvasPosition position)
+        {
+            ContextMenuOptions = new Dictionary<string, EventCallback<MouseEventArgs>>
+            {
+                { "log", EventCallback.Factory.Create<MouseEventArgs>(this, () =>  Console.WriteLine("log multiple"))}
+            };
+            OnContextMenuChange?.Invoke();
+        }
+        
+        [JSInvokable]
+        public void CloseContextMenu()
+        {
+            ContextMenuOptions = null;
+            OnContextMenuChange?.Invoke();
         }
 
         private void MoveObject(Player player, CanvasElement element)

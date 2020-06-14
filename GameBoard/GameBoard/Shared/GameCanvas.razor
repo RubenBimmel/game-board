@@ -5,16 +5,21 @@
 <div id="canvas-wrapper">
     <canvas id="canvas"></canvas>
     <PlayerList PlayerId="@playerId"/>
+    <ContextMenu PlayerEventHandler="@playerEventHandler"/>
 </div>
 
 @code {
     private PlayerEventHandler playerEventHandler { get; set; }
     private Guid playerId { get; set; }
 
+    protected override void OnInitialized()
+    {
+        playerEventHandler = new PlayerEventHandler(JsRuntime, Service);
+    }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender) {
-            playerEventHandler = new PlayerEventHandler(JsRuntime, Service);
             playerId = await playerEventHandler.Initialize();
             StateHasChanged();
         }

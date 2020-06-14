@@ -22,17 +22,11 @@
     <list default="true" id="e57f34e9-7658-426c-97da-8432a30475f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameBoard/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameBoard/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameBoard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameBoard/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Data/GameService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/GameService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameBoard/GameBoard.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/GameBoard.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Pages/Canvas.razor" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Shared/GameCanvas.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Pages/Counter.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Pages/Error.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Pages/Index.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Shared/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Shared/MainLayout.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Shared/NavMenu.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Shared/SurveyPrompt.razor" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Shared/GameCanvas.razor" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Shared/GameCanvas.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameBoard/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +58,7 @@
     <setting file="file://$PROJECT_DIR$/GameBoard/Data/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/FF79B842-EB03-425A-B99E-9D4470A9CE62/14/LayoutComponentBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GameBoard/Shared/ContextMenu.razor" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameBoard/Data/GameService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/GameBoard/Shared/PlayerList.razor" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
@@ -77,16 +72,20 @@
         <option value="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/Canvas.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/Card.cs" />
-        <option value="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" />
         <option value="$PROJECT_DIR$/GameBoard/Shared/Canvas.razor" />
         <option value="$PROJECT_DIR$/GameBoard/Shared/SurveyPrompt.razor" />
         <option value="$PROJECT_DIR$/GameBoard/Pages/Index.razor" />
-        <option value="$PROJECT_DIR$/GameBoard/wwwroot/css/site.css" />
         <option value="$PROJECT_DIR$/GameBoard/Data/GameService.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Shared/MainLayout.razor" />
-        <option value="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" />
         <option value="$PROJECT_DIR$/GameBoard/wwwroot/css/player-list.css" />
         <option value="$PROJECT_DIR$/GameBoard/Shared/PlayerList.razor" />
+        <option value="$PROJECT_DIR$/GameBoard/Data/ContextMenu.cs" />
+        <option value="$PROJECT_DIR$/GameBoard/Shared/ContextMenu.cs" />
+        <option value="$PROJECT_DIR$/GameBoard/wwwroot/css/site.css" />
+        <option value="$PROJECT_DIR$/GameBoard/wwwroot/css/context-menu.css" />
+        <option value="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" />
+        <option value="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" />
+        <option value="$PROJECT_DIR$/GameBoard/Shared/ContextMenu.razor" />
         <option value="$PROJECT_DIR$/GameBoard/Shared/GameCanvas.razor" />
       </list>
     </option>
@@ -157,7 +156,8 @@
       <option name="presentableId" value="Default" />
       <updated>1590583017532</updated>
       <workItem from="1590583018892" duration="11682000" />
-      <workItem from="1591794480798" duration="6497000" />
+      <workItem from="1591794480798" duration="6855000" />
+      <workItem from="1592125297739" duration="9861000" />
     </task>
     <servers />
   </component>
@@ -176,35 +176,44 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2518" height="399" key="GridCell.Tab.0.bottom" timestamp="1591800896601">
+    <state width="2517" height="232" key="GridCell.Tab.0.bottom" timestamp="1592135633459">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2518" height="399" key="GridCell.Tab.0.bottom/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591800896601" />
-    <state width="2518" height="399" key="GridCell.Tab.0.center" timestamp="1591800896601">
+    <state width="2517" height="232" key="GridCell.Tab.0.bottom/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1592135633459" />
+    <state width="187" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591817715780" />
+    <state width="2517" height="232" key="GridCell.Tab.0.center" timestamp="1592135633459">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2518" height="399" key="GridCell.Tab.0.center/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591800896601" />
-    <state width="2518" height="399" key="GridCell.Tab.0.left" timestamp="1591800896601">
+    <state width="2517" height="232" key="GridCell.Tab.0.center/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1592135633459" />
+    <state width="187" height="2" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591817715779" />
+    <state width="2517" height="232" key="GridCell.Tab.0.left" timestamp="1592135633459">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2518" height="399" key="GridCell.Tab.0.left/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591800896601" />
-    <state width="2518" height="399" key="GridCell.Tab.0.right" timestamp="1591800896601">
+    <state width="2517" height="232" key="GridCell.Tab.0.left/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1592135633459" />
+    <state width="187" height="2" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591817715779" />
+    <state width="2517" height="232" key="GridCell.Tab.0.right" timestamp="1592135633459">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2518" height="399" key="GridCell.Tab.0.right/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591800896601" />
+    <state width="2517" height="232" key="GridCell.Tab.0.right/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1592135633459" />
+    <state width="187" height="2" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591817715779" />
     <state x="4798" y="885" width="780" height="534" key="find.popup" timestamp="1591799589282">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
     <state x="4798" y="885" width="780" height="534" key="find.popup/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591799589282" />
-    <state width="300" height="36" key="javadoc.popup.new" timestamp="1591799182902">
+    <state width="300" height="36" key="javadoc.popup.new" timestamp="1592132648089">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="300" height="36" key="javadoc.popup.new/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1591799182902" />
+    <state width="300" height="36" key="javadoc.popup.new/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1592132648089" />
+    <state x="4783" y="767" width="672" height="678" key="search.everywhere.popup" timestamp="1592128383259">
+      <screen x="3840" y="452" width="2560" height="1400" />
+    </state>
+    <state x="4783" y="767" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1592128383259" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

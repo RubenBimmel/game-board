@@ -38,6 +38,7 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Shared" t="Include">
+          <e p="ContextMenu.razor" t="Include" />
           <e p="GameCanvas.razor" t="Include" />
           <e p="MainLayout.razor" t="Include" />
           <e p="PlayerList.razor" t="Include" />
@@ -50,6 +51,7 @@
               <e p="bootstrap.min.css.map" t="Include" />
             </e>
             <e p="canvas.css" t="Include" />
+            <e p="context-menu.css" t="Include" />
             <e p="open-iconic" t="Include">
               <e p="font" t="Include">
                 <e p="css" t="Include">
