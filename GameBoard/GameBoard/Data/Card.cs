@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 
 namespace GameBoard.Data
 {
@@ -20,6 +23,16 @@ namespace GameBoard.Data
         {
             Flip();
             canvas.UpdateObject(this);
+        }
+
+        public override Dictionary<string, EventCallback<MouseEventArgs>> GetContextMenuOptions()
+        {
+            return new Dictionary<string, EventCallback<MouseEventArgs>>
+            {
+                {
+                    "log", EventCallback.Factory.Create<MouseEventArgs>(this, () => Console.WriteLine("log element " + Id))
+                }
+            };
         }
 
         private void Flip()

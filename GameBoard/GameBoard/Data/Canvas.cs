@@ -15,6 +15,11 @@ namespace GameBoard.Data
         
         private int _currentId;
 
+        public CanvasElement GetObject(int id)
+        {
+            return Elements.Find(e => e.Id == id);
+        }
+        
         public void MoveObject(Player player, CanvasElement element)
         {
             var idx = Elements.FindIndex(e => e.Id == element.Id);
@@ -41,12 +46,12 @@ namespace GameBoard.Data
         {
             foreach (var id in ids)
             {
-                var idx = Elements.FindIndex(e => e.Id == id);
+                var element = GetObject(id);
                 
-                if (Elements[idx].Owner != player)
+                if (element.Owner != player)
                 {
-                    Elements[idx].Owner = player;
-                    OnObjectSelected?.Invoke(player, Elements[idx]);
+                    element.Owner = player;
+                    OnObjectSelected?.Invoke(player, element);
                 }
             }
         }
@@ -58,7 +63,7 @@ namespace GameBoard.Data
 
         public void DoubleClick(Player player, int id)
         {
-            var element = Elements.Find(e => e.Id == id);
+            var element = GetObject(id);
             
             if (element?.Owner == player)
             {

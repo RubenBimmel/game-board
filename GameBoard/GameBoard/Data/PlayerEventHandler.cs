@@ -7,11 +7,13 @@ using Microsoft.JSInterop;
 
 namespace GameBoard.Data
 {
+    public delegate void ContextMenuDelegate(CanvasPosition position, Dictionary<string, EventCallback<MouseEventArgs>> options);
+    
     public class PlayerEventHandler : IDisposable
     {
-        public Dictionary<string, EventCallback<MouseEventArgs>> ContextMenuOptions { get; set; }
-        public event Action OnContextMenuChange;
-        
+        public ContextMenuDelegate OnContextMenuOpen;
+        public Action OnContextMenuClose;
+
         private readonly IJSRuntime _jsRuntime;
         private readonly GameService _gameService;
         
@@ -106,38 +108,31 @@ namespace GameBoard.Data
         [JSInvokable]
         public void OnRightClick(CanvasPosition position)
         {
-            ContextMenuOptions = new Dictionary<string, EventCallback<MouseEventArgs>>
+            OnContextMenuOpen?.Invoke(position, new Dictionary<string, EventCallback<MouseEventArgs>>
             {
                 { "log", EventCallback.Factory.Create<MouseEventArgs>(this, () =>  Console.WriteLine("log canvas"))}
-            };
-            OnContextMenuChange?.Invoke();
+            });
         }
         
         [JSInvokable]
         public void OnRightClickElement(int id, CanvasPosition position)
         {
-            ContextMenuOptions = new Dictionary<string, EventCallback<MouseEventArgs>>
-            {
-                { "log", EventCallback.Factory.Create<MouseEventArgs>(this, () =>  Console.WriteLine("log element " + id))}
-            };
-            OnContextMenuChange?.Invoke();
+            OnContextMenuOpen?.Invoke(position, _gameService.Canvas.GetObject(id).GetContextMenuOptions());
         }
         
         [JSInvokable]
         public void OnRightClickMultiple(int[] ids, CanvasPosition position)
         {
-            ContextMenuOptions = new Dictionary<string, EventCallback<MouseEventArgs>>
+            OnContextMenuOpen?.Invoke(position, new Dictionary<string, EventCallback<MouseEventArgs>>
             {
                 { "log", EventCallback.Factory.Create<MouseEventArgs>(this, () =>  Console.WriteLine("log multiple"))}
-            };
-            OnContextMenuChange?.Invoke();
+            });
         }
         
         [JSInvokable]
         public void CloseContextMenu()
         {
-            ContextMenuOptions = null;
-            OnContextMenuChange?.Invoke();
+            OnContextMenuClose?.Invoke();
         }
 
         private void MoveObject(Player player, CanvasElement element)

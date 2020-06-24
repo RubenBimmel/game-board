@@ -49,6 +49,8 @@ function setPlayerId(id) {
 
 function onMouseDown(options) {
     if (contextMenuOpen) {
+        contextMenuOpen = false;
+        dotnet.invokeMethodAsync("CloseContextMenu");
         return;
     }
     
@@ -98,12 +100,6 @@ function onMouseUp(options) {
                 Left: options.pointer.x
             });
         }
-        return;
-    }
-    
-    if (contextMenuOpen) {
-        contextMenuOpen = false;
-        dotnet.invokeMethodAsync("CloseContextMenu");
         return;
     }
     

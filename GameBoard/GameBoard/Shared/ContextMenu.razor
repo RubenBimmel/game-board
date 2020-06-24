@@ -1,14 +1,14 @@
 @using GameBoard.Data
 @implements IDisposable
 
-<div id="context-menu">
-    @if (show)
+<div id="context-menu" style="top: @(_top)px; left:  @(_left)px;">
+    @if (_show)
     {
         <ul>
-            @foreach (var option in PlayerEventHandler.ContextMenuOptions.Keys)
+            @foreach (var option in _options.Keys)
             {
                 <li>
-                    <button @onclick="PlayerEventHandler.ContextMenuOptions[option]">@option</button>
+                    <button @onclick="_options[option]">@option</button>
                 </li>
             }
         </ul>
@@ -18,20 +18,46 @@
 @code {
     [Parameter] public PlayerEventHandler PlayerEventHandler { get; set; }
 
-    private bool show => PlayerEventHandler.ContextMenuOptions != null && PlayerEventHandler.ContextMenuOptions.Count > 0;
+    private bool _show;
+    private int _top;
+    private int _left;
+    private Dictionary<string, EventCallback<MouseEventArgs>> _options;
     
     protected override void OnInitialized()
     {
-        PlayerEventHandler.OnContextMenuChange += UpdateContextMenu;
+        PlayerEventHandler.OnContextMenuOpen += Open;
+        PlayerEventHandler.OnContextMenuClose += Close;
     }
 
     public void Dispose()
     {
-        PlayerEventHandler.OnContextMenuChange -= UpdateContextMenu;
+        PlayerEventHandler.OnContextMenuOpen -= Open;
+        PlayerEventHandler.OnContextMenuClose -= Close;
     }
 
-    private async void UpdateContextMenu()
+    private async void Open(CanvasPosition position, Dictionary<string, EventCallback<MouseEventArgs>> options)
     {
+        if (options == null || options.Count == 0)
+        {
+            Close();
+            return;
+        }
+        
+        _show = true;
+        _top = Convert.ToInt32(position.Top);
+        _left = Convert.ToInt32(position.Left);
+        _options = options;
+        await InvokeAsync(StateHasChanged);
+    }
+    
+    private async void Close()
+    {
+        if (!_show)
+        {
+            return;
+        }
+        
+        _show = false;
         await InvokeAsync(StateHasChanged);
     }
 }
