@@ -7,7 +7,7 @@ using Microsoft.JSInterop;
 
 namespace GameBoard.Data
 {
-    public delegate void ContextMenuDelegate(CanvasPosition position, Dictionary<string, EventCallback<MouseEventArgs>> options);
+    public delegate void ContextMenuDelegate(CanvasPosition position, string title,  Dictionary<string, Action> options);
     
     public class PlayerEventHandler : IDisposable
     {
@@ -51,6 +51,7 @@ namespace GameBoard.Data
             
             _gameService.Canvas.OnObjectMoved += MoveObject;
             _gameService.Canvas.OnObjectAdded += AddObject;
+            _gameService.Canvas.OnObjectRemoved += RemoveObject;
             _gameService.Canvas.OnObjectSelected += SelectObject;
             _gameService.Canvas.OnObjectChanged += UpdateObject;
 
@@ -68,6 +69,7 @@ namespace GameBoard.Data
             _objRef?.Dispose();
             _gameService.Canvas.OnObjectMoved -= MoveObject;
             _gameService.Canvas.OnObjectAdded -= AddObject;
+            _gameService.Canvas.OnObjectRemoved -= RemoveObject;
             _gameService.Canvas.OnObjectSelected -= SelectObject;
             _gameService.Canvas.OnObjectChanged -= UpdateObject;
             _gameService.Canvas.ClearSelection(_player);
@@ -78,13 +80,7 @@ namespace GameBoard.Data
         {
             _gameService.Canvas.MoveObject(_player, data);
         }
-        
-        [JSInvokable]
-        public void OnAdd(CanvasPosition position)
-        {
-            _gameService.Canvas.AddObject(_player, position);
-        }
-        
+
         [JSInvokable]
         public void OnSelect(int[] ids)
         {
@@ -108,25 +104,23 @@ namespace GameBoard.Data
         [JSInvokable]
         public void OnRightClick(CanvasPosition position)
         {
-            OnContextMenuOpen?.Invoke(position, new Dictionary<string, EventCallback<MouseEventArgs>>
+            OnContextMenuOpen?.Invoke(position, "Canvas", new Dictionary<string, Action>
             {
-                { "log", EventCallback.Factory.Create<MouseEventArgs>(this, () =>  Console.WriteLine("log canvas"))}
+                { "Add card", () => _gameService.Canvas.AddObject(_player, position) }
             });
         }
         
         [JSInvokable]
         public void OnRightClickElement(int id, CanvasPosition position)
         {
-            OnContextMenuOpen?.Invoke(position, _gameService.Canvas.GetObject(id).GetContextMenuOptions());
+            var element = _gameService.Canvas.GetObject(id);
+            OnContextMenuOpen?.Invoke(position, element.DisplayName, element.GetContextMenuOptions());
         }
         
         [JSInvokable]
         public void OnRightClickMultiple(int[] ids, CanvasPosition position)
         {
-            OnContextMenuOpen?.Invoke(position, new Dictionary<string, EventCallback<MouseEventArgs>>
-            {
-                { "log", EventCallback.Factory.Create<MouseEventArgs>(this, () =>  Console.WriteLine("log multiple"))}
-            });
+            OnContextMenuOpen?.Invoke(position, "Multiple", new Dictionary<string, Action>());
         }
         
         [JSInvokable]
@@ -144,6 +138,11 @@ namespace GameBoard.Data
         private void AddObject(Player player, CanvasElement element)
         {
             _jsRuntime.InvokeVoidAsync("addObject", element, element.Owner == _player);
+        }
+        
+        private void RemoveObject(Player player, CanvasElement element)
+        {
+            _jsRuntime.InvokeVoidAsync("removeObject", element.Id);
         }
 
         private void SelectObject(Player player, CanvasElement element)

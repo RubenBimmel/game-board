@@ -5,10 +5,13 @@
     @if (_show)
     {
         <ul>
+            <li class="context-menu-header">
+                @_title
+            </li>
             @foreach (var option in _options.Keys)
             {
                 <li>
-                    <button @onclick="_options[option]">@option</button>
+                    <button @onclick="e => OnClick(option)">@option</button>
                 </li>
             }
         </ul>
@@ -19,9 +22,10 @@
     [Parameter] public PlayerEventHandler PlayerEventHandler { get; set; }
 
     private bool _show;
+    private string _title;
     private int _top;
     private int _left;
-    private Dictionary<string, EventCallback<MouseEventArgs>> _options;
+    private Dictionary<string, Action> _options;
     
     protected override void OnInitialized()
     {
@@ -35,18 +39,19 @@
         PlayerEventHandler.OnContextMenuClose -= Close;
     }
 
-    private async void Open(CanvasPosition position, Dictionary<string, EventCallback<MouseEventArgs>> options)
+    private void Open(CanvasPosition position, CanvasElement element)
     {
-        if (options == null || options.Count == 0)
-        {
-            Close();
-            return;
-        }
-        
+        Open(position, element.DisplayName, element.GetContextMenuOptions());
+    }
+    
+    private async void Open(CanvasPosition position, string title, Dictionary<string, Action> options)
+    {
         _show = true;
+        _title = title;
         _top = Convert.ToInt32(position.Top);
         _left = Convert.ToInt32(position.Left);
         _options = options;
+        
         await InvokeAsync(StateHasChanged);
     }
     
@@ -58,6 +63,13 @@
         }
         
         _show = false;
+        
         await InvokeAsync(StateHasChanged);
     }
+
+    private void OnClick(string option)
+    {
+        _options[option]?.Invoke();
+        Close();
+    } 
 }

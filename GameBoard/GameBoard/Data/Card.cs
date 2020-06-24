@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 
 namespace GameBoard.Data
 {
@@ -10,10 +8,12 @@ namespace GameBoard.Data
         public bool FaceUp { get; set; }
         public string Value { get; set; }
         
-        public Card(int id, CanvasPosition position, string value = null)
+        public Card(Canvas canvas, int id, CanvasPosition position, string value = null)
         {
+            Canvas = canvas;
             Id = id;
             Position = position;
+            DisplayName = "Card";
             Image = DeckOfCards.BackUrl;
             FaceUp = false;
             Value = value ?? DeckOfCards.GetRandomCard();
@@ -22,16 +22,14 @@ namespace GameBoard.Data
         public override void OnDoubleClick(Canvas canvas)
         {
             Flip();
-            canvas.UpdateObject(this);
         }
 
-        public override Dictionary<string, EventCallback<MouseEventArgs>> GetContextMenuOptions()
+        public override Dictionary<string, Action> GetContextMenuOptions()
         {
-            return new Dictionary<string, EventCallback<MouseEventArgs>>
+            return new Dictionary<string, Action>
             {
-                {
-                    "log", EventCallback.Factory.Create<MouseEventArgs>(this, () => Console.WriteLine("log element " + Id))
-                }
+                { "Flip", Flip },
+                { "Remove", Remove }
             };
         }
 
@@ -44,6 +42,12 @@ namespace GameBoard.Data
         {
             FaceUp = up;
             Image = FaceUp ? DeckOfCards.GetUrl(Value) : DeckOfCards.BackUrl;
+            Canvas.UpdateObject(this);
+        }
+
+        private void Remove()
+        {
+            Canvas.RemoveObject(Id);
         }
     }
 }

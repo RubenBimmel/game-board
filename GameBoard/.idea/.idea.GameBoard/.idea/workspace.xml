@@ -20,10 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57f34e9-7658-426c-97da-8432a30475f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameBoard/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameBoard/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameBoard/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameBoard/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameBoard/Data/Canvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/Canvas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Data/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/Card.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Shared/ContextMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Shared/ContextMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Shared/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Shared/MainLayout.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/wwwroot/css/context-menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/wwwroot/css/context-menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,22 +78,22 @@
         <option value="$PROJECT_DIR$/GameBoard/Shared/SurveyPrompt.razor" />
         <option value="$PROJECT_DIR$/GameBoard/Pages/Index.razor" />
         <option value="$PROJECT_DIR$/GameBoard/Data/GameService.cs" />
-        <option value="$PROJECT_DIR$/GameBoard/Shared/MainLayout.razor" />
         <option value="$PROJECT_DIR$/GameBoard/wwwroot/css/player-list.css" />
         <option value="$PROJECT_DIR$/GameBoard/Shared/PlayerList.razor" />
         <option value="$PROJECT_DIR$/GameBoard/Data/ContextMenu.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Shared/ContextMenu.cs" />
         <option value="$PROJECT_DIR$/GameBoard/wwwroot/css/site.css" />
-        <option value="$PROJECT_DIR$/GameBoard/wwwroot/css/context-menu.css" />
         <option value="$PROJECT_DIR$/GameBoard/Shared/GameCanvas.razor" />
-        <option value="$PROJECT_DIR$/GameBoard/Data/Card.cs" />
-        <option value="$PROJECT_DIR$/GameBoard/Shared/ContextMenu.razor" />
-        <option value="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" />
-        <option value="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/CanvasTransform.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/CanvasMoveEvent.cs" />
-        <option value="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" />
+        <option value="$PROJECT_DIR$/GameBoard/Shared/ContextMenu.razor" />
+        <option value="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" />
+        <option value="$PROJECT_DIR$/GameBoard/wwwroot/css/context-menu.css" />
+        <option value="$PROJECT_DIR$/GameBoard/Shared/MainLayout.razor" />
+        <option value="$PROJECT_DIR$/GameBoard/Data/Card.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/Canvas.cs" />
+        <option value="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" />
+        <option value="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" />
       </list>
     </option>
   </component>
@@ -160,7 +165,7 @@
       <workItem from="1590583018892" duration="11682000" />
       <workItem from="1591794480798" duration="6855000" />
       <workItem from="1592125297739" duration="10220000" />
-      <workItem from="1593001879931" duration="6675000" />
+      <workItem from="1593001879931" duration="9598000" />
     </task>
     <servers />
   </component>
@@ -185,25 +190,25 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="232" key="GridCell.Tab.0.bottom" timestamp="1593008397829">
+    <state width="2517" height="232" key="GridCell.Tab.0.bottom" timestamp="1593010583379">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2517" height="232" key="GridCell.Tab.0.bottom/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593008397829" />
+    <state width="2517" height="232" key="GridCell.Tab.0.bottom/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593010583379" />
     <state width="187" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591817715780" />
-    <state width="2517" height="232" key="GridCell.Tab.0.center" timestamp="1593008397829">
+    <state width="2517" height="232" key="GridCell.Tab.0.center" timestamp="1593010583379">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2517" height="232" key="GridCell.Tab.0.center/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593008397829" />
+    <state width="2517" height="232" key="GridCell.Tab.0.center/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593010583379" />
     <state width="187" height="2" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591817715779" />
-    <state width="2517" height="232" key="GridCell.Tab.0.left" timestamp="1593008397829">
+    <state width="2517" height="232" key="GridCell.Tab.0.left" timestamp="1593010583379">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2517" height="232" key="GridCell.Tab.0.left/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593008397829" />
+    <state width="2517" height="232" key="GridCell.Tab.0.left/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593010583379" />
     <state width="187" height="2" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591817715779" />
-    <state width="2517" height="232" key="GridCell.Tab.0.right" timestamp="1593008397829">
+    <state width="2517" height="232" key="GridCell.Tab.0.right" timestamp="1593010583379">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2517" height="232" key="GridCell.Tab.0.right/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593008397829" />
+    <state width="2517" height="232" key="GridCell.Tab.0.right/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593010583379" />
     <state width="187" height="2" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591817715779" />
     <state x="4950" y="835" key="RiderGenerateDialog" timestamp="1593003011435">
       <screen x="3840" y="452" width="2560" height="1400" />
@@ -213,10 +218,10 @@
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
     <state x="4798" y="885" width="780" height="534" key="find.popup/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1592135691687" />
-    <state width="300" height="36" key="javadoc.popup.new" timestamp="1593003326263">
+    <state width="300" height="36" key="javadoc.popup.new" timestamp="1593009268356">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="300" height="36" key="javadoc.popup.new/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593003326263" />
+    <state width="300" height="36" key="javadoc.popup.new/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593009268356" />
     <state x="4783" y="767" width="672" height="678" key="search.everywhere.popup" timestamp="1592128383259">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>

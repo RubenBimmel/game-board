@@ -9,6 +9,7 @@ namespace GameBoard.Data
     {
         public event ObjectDelegate OnObjectMoved;
         public event ObjectDelegate OnObjectAdded;
+        public event ObjectDelegate OnObjectRemoved;
         public event ObjectDelegate OnObjectSelected;
         public event ObjectDelegate OnObjectChanged;
         public readonly List<CanvasElement> Elements = new List<CanvasElement>();
@@ -37,9 +38,16 @@ namespace GameBoard.Data
 
         public void AddObject(Player player, CanvasPosition position)
         {
-            var element = new Card(_currentId++, position);
+            var element = new Card(this, _currentId++, position);
             Elements.Add(element);
             OnObjectAdded?.Invoke(player, element);
+        }
+
+        public void RemoveObject(int id)
+        {
+            var element = GetObject(id);
+            Elements.Remove(element);
+            OnObjectRemoved?.Invoke(null, element);
         }
 
         public void SelectObjects(Player player, IEnumerable<int> ids)

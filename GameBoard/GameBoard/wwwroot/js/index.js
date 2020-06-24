@@ -58,18 +58,7 @@ function onMouseDown(options) {
         return;
     }
     
-    if (updateSelection()) {
-        return;
-    }
-    
-    if (options.target) {
-        return;
-    }
-
-    dotnet.invokeMethodAsync("OnAdd", {
-        Top: options.pointer.y,
-        Left: options.pointer.x
-    });
+    updateSelection();
 }
 
 function onMouseUp(options) {
@@ -190,6 +179,10 @@ function addObject(element, owned) {
             selectObject(element, owner)
         }
     });
+}
+
+function removeObject(id) {
+    canvas.remove(networkElements[id]);
 }
 
 function selectObject(element, owned) {
