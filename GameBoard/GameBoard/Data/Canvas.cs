@@ -20,17 +20,17 @@ namespace GameBoard.Data
             return Elements.Find(e => e.Id == id);
         }
         
-        public void MoveObject(Player player, CanvasElement element)
+        public void MoveObject(Player player, CanvasMoveEvent data)
         {
-            var idx = Elements.FindIndex(e => e.Id == element.Id);
+            var idx = Elements.FindIndex(e => e.Id == data.Id);
 
             if (Elements[idx].Owner != player)
             {
                 return;
             }
 
-            Elements[idx].Position = element.Position;
-            Elements[idx].Angle = element.Angle;
+            Elements[idx].Position = data.Position;
+            Elements[idx].Angle = data.Angle;
             
             OnObjectMoved?.Invoke(player, Elements[idx]);
         }

@@ -74,9 +74,9 @@ namespace GameBoard.Data
         }
 
         [JSInvokable]
-        public void OnMove(CanvasElement element)
+        public void OnMove(CanvasMoveEvent data)
         {
-            _gameService.Canvas.MoveObject(_player, element);
+            _gameService.Canvas.MoveObject(_player, data);
         }
         
         [JSInvokable]
