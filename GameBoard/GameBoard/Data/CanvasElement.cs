@@ -1,6 +1,6 @@
 namespace GameBoard.Data
 {
-    public class CanvasElement
+    public abstract class CanvasElement
     {
         public int Id { get; set; }
         public string Image { get; set; }
@@ -8,6 +8,6 @@ namespace GameBoard.Data
         public float Angle { get; set; }
         public Player Owner { get; set; }
 
-        public virtual void OnDoubleClick(Canvas canvas) { }
+        public abstract void OnDoubleClick(Canvas canvas);
     }
 }
