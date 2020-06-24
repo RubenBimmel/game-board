@@ -81,6 +81,13 @@ function onMouseUp(options) {
         }
         else if (!isNaN(options.target.id))
         {
+            if(!options.target.selectable) {
+                return;
+            }
+
+            canvas.setActiveObject(options.target);
+            updateSelection();
+            
             dotnet.invokeMethodAsync("OnRightClickElement", options.target.id, {
                 Top: options.pointer.y,
                 Left: options.pointer.x
@@ -170,7 +177,7 @@ function dispose() {
     window.removeEventListener('resize', resize);
 }
 
-function addObject(element) {
+function addObject(element, owned) {
     fabric.Image.fromURL(element.image, object => {
         object.set({
             id: element.id,
@@ -182,11 +189,15 @@ function addObject(element) {
 
         networkElements[element.id] = object;
         canvas.add(object);
+        
+        if (element.owner) {
+            selectObject(element, owner)
+        }
     });
 }
 
-function selectObject(element, owner) {
-    let selectable = element.owner ? owner : true;
+function selectObject(element, owned) {
+    let selectable = element.owner ? owned : true;
     networkElements[element.id].set('stroke', element.owner?.color);
     networkElements[element.id].set('strokeWidth', element.owner ? 5 : 0);
     networkElements[element.id].set('selectable', selectable);

@@ -1,6 +1,7 @@
 @using GameBoard.Data
 @inject IJSRuntime JsRuntime;
 @inject GameService Service;
+@implements IDisposable;
 
 <div id="canvas-wrapper">
     <canvas id="canvas"></canvas>
@@ -23,5 +24,10 @@
             playerId = await playerEventHandler.Initialize();
             StateHasChanged();
         }
+    }
+
+    public void Dispose()
+    {
+        playerEventHandler?.Dispose();
     }
 }

@@ -68,6 +68,7 @@ namespace GameBoard.Data
             _gameService.Canvas.OnObjectAdded -= AddObject;
             _gameService.Canvas.OnObjectSelected -= SelectObject;
             _gameService.Canvas.OnObjectChanged -= UpdateObject;
+            _gameService.Canvas.ClearSelection(_player);
         }
 
         [JSInvokable]
@@ -147,12 +148,12 @@ namespace GameBoard.Data
         
         private void AddObject(Player player, CanvasElement element)
         {
-            _jsRuntime.InvokeVoidAsync("addObject", element);
+            _jsRuntime.InvokeVoidAsync("addObject", element, element.Owner == _player);
         }
 
         private void SelectObject(Player player, CanvasElement element)
         {
-            _jsRuntime.InvokeVoidAsync("selectObject", element, _player == player);
+            _jsRuntime.InvokeVoidAsync("selectObject", element, player == _player);
         }
 
         private void UpdateObject(Player player, CanvasElement element)

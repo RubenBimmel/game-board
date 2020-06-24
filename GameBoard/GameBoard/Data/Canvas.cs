@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GameBoard.Data
 {
@@ -41,8 +42,12 @@ namespace GameBoard.Data
             foreach (var id in ids)
             {
                 var idx = Elements.FindIndex(e => e.Id == id);
-                Elements[idx].Owner = player;
-                OnObjectSelected?.Invoke(player, Elements[idx]);
+                
+                if (Elements[idx].Owner != player)
+                {
+                    Elements[idx].Owner = player;
+                    OnObjectSelected?.Invoke(player, Elements[idx]);
+                }
             }
         }
 
@@ -54,7 +59,16 @@ namespace GameBoard.Data
         public void DoubleClick(Player player, int id)
         {
             var element = Elements.Find(e => e.Id == id);
-            element?.OnDoubleClick(this);
+            
+            if (element?.Owner == player)
+            {
+                element?.OnDoubleClick(this);
+            }
+        }
+
+        public void ClearSelection(Player player)
+        {
+            SelectObjects(null, Elements.Where(e => e.Owner == player).Select(e => e.Id));
         }
     }
 }
