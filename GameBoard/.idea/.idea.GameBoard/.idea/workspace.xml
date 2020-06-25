@@ -24,11 +24,8 @@
       <change beforePath="$PROJECT_DIR$/GameBoard/Data/Canvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/Canvas.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameBoard/Data/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/Card.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameBoard/Data/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Shared/ContextMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Shared/ContextMenu.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/Shared/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/Shared/MainLayout.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/wwwroot/css/context-menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/wwwroot/css/context-menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +69,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/GameBoard/_Imports.razor" />
-        <option value="$PROJECT_DIR$/GameBoard/Data/Player.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/DeckOfCards.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Shared/Canvas.razor" />
         <option value="$PROJECT_DIR$/GameBoard/Shared/SurveyPrompt.razor" />
@@ -87,13 +83,14 @@
         <option value="$PROJECT_DIR$/GameBoard/Data/CanvasTransform.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/CanvasMoveEvent.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Shared/ContextMenu.razor" />
-        <option value="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" />
         <option value="$PROJECT_DIR$/GameBoard/wwwroot/css/context-menu.css" />
         <option value="$PROJECT_DIR$/GameBoard/Shared/MainLayout.razor" />
         <option value="$PROJECT_DIR$/GameBoard/Data/Card.cs" />
+        <option value="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" />
+        <option value="$PROJECT_DIR$/GameBoard/Data/Player.cs" />
+        <option value="$PROJECT_DIR$/GameBoard/Data/CanvasElement.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/Canvas.cs" />
         <option value="$PROJECT_DIR$/GameBoard/Data/PlayerEventHandler.cs" />
-        <option value="$PROJECT_DIR$/GameBoard/wwwroot/js/index.js" />
       </list>
     </option>
   </component>
@@ -118,6 +115,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.CSharpInteractiveConfiguration" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.GameBoard: GameBoard">
@@ -165,7 +163,7 @@
       <workItem from="1590583018892" duration="11682000" />
       <workItem from="1591794480798" duration="6855000" />
       <workItem from="1592125297739" duration="10220000" />
-      <workItem from="1593001879931" duration="9598000" />
+      <workItem from="1593001879931" duration="12404000" />
     </task>
     <servers />
   </component>
@@ -190,25 +188,25 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="232" key="GridCell.Tab.0.bottom" timestamp="1593010583379">
+    <state width="2517" height="232" key="GridCell.Tab.0.bottom" timestamp="1593014735603">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2517" height="232" key="GridCell.Tab.0.bottom/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593010583379" />
+    <state width="2517" height="232" key="GridCell.Tab.0.bottom/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593014735603" />
     <state width="187" height="2" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591817715780" />
-    <state width="2517" height="232" key="GridCell.Tab.0.center" timestamp="1593010583379">
+    <state width="2517" height="232" key="GridCell.Tab.0.center" timestamp="1593014735603">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2517" height="232" key="GridCell.Tab.0.center/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593010583379" />
+    <state width="2517" height="232" key="GridCell.Tab.0.center/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593014735603" />
     <state width="187" height="2" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591817715779" />
-    <state width="2517" height="232" key="GridCell.Tab.0.left" timestamp="1593010583379">
+    <state width="2517" height="232" key="GridCell.Tab.0.left" timestamp="1593014735603">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2517" height="232" key="GridCell.Tab.0.left/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593010583379" />
+    <state width="2517" height="232" key="GridCell.Tab.0.left/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593014735603" />
     <state width="187" height="2" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591817715779" />
-    <state width="2517" height="232" key="GridCell.Tab.0.right" timestamp="1593010583379">
+    <state width="2517" height="232" key="GridCell.Tab.0.right" timestamp="1593014735603">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="2517" height="232" key="GridCell.Tab.0.right/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593010583379" />
+    <state width="2517" height="232" key="GridCell.Tab.0.right/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593014735603" />
     <state width="187" height="2" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591817715779" />
     <state x="4950" y="835" key="RiderGenerateDialog" timestamp="1593003011435">
       <screen x="3840" y="452" width="2560" height="1400" />
@@ -218,10 +216,10 @@
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
     <state x="4798" y="885" width="780" height="534" key="find.popup/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1592135691687" />
-    <state width="300" height="36" key="javadoc.popup.new" timestamp="1593009268356">
+    <state width="300" height="36" key="javadoc.popup.new" timestamp="1593013760900">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>
-    <state width="300" height="36" key="javadoc.popup.new/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593009268356" />
+    <state width="300" height="36" key="javadoc.popup.new/0.0.1920.1040/3840.452.2560.1400@3840.452.2560.1400" timestamp="1593013760900" />
     <state x="4783" y="767" width="672" height="678" key="search.everywhere.popup" timestamp="1592128383259">
       <screen x="3840" y="452" width="2560" height="1400" />
     </state>

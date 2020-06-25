@@ -15,5 +15,17 @@ namespace GameBoard.Data
 
         public abstract void OnDoubleClick(Canvas canvas);
         public abstract Dictionary<string, Action> GetContextMenuOptions();
+
+        protected void AddToHand()
+        {
+            //Owner.Hand.Add(this);
+            Console.WriteLine("Add to hand");
+            Canvas.RemoveObject(Id);
+        }
+        
+        protected void Remove()
+        {
+            Canvas.RemoveObject(Id);
+        }
     }
 }

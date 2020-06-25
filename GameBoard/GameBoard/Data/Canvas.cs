@@ -56,6 +56,10 @@ namespace GameBoard.Data
             {
                 var element = GetObject(id);
                 
+                if (element == null)
+                {
+                    continue;
+                }
                 if (element.Owner != player)
                 {
                     element.Owner = player;

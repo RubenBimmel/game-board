@@ -29,6 +29,7 @@ namespace GameBoard.Data
             return new Dictionary<string, Action>
             {
                 { "Flip", Flip },
+                { "Add to hand", AddToHand },
                 { "Remove", Remove }
             };
         }
@@ -43,11 +44,6 @@ namespace GameBoard.Data
             FaceUp = up;
             Image = FaceUp ? DeckOfCards.GetUrl(Value) : DeckOfCards.BackUrl;
             Canvas.UpdateObject(this);
-        }
-
-        private void Remove()
-        {
-            Canvas.RemoveObject(Id);
         }
     }
 }
